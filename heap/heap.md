@@ -42,7 +42,17 @@ Priority Queues: <br />
 
 Python heapq: Each parent node is small or equal to any of its children. It is a min-heap.<br />
 Functions: <br />
-heapq.heappush(heap, item) => 
+heapq.heappush(heap, item) => Adds new item to heap maintaining the heap invariant <br />
+heapq.heappop(heap) => returns the smallest item from the heap maintaining heap property. If heap is empty, 
+'IndexError' is raised <br />
+heapq.heappushpop(heap, item) => Pushes new item on the heap, then pops and returns the smallest item from
+the heap. This is more efficient than heappush() AND heappop(). <br />
+heapq.heapify() => transforms x list into heap. <br />
+heapq.heapreplace(heap, item) => Pop and returns the smallest item from the heap and also pushes the new item.
+The heap size does not change. If empty, 'IndexError' is raised. The function is more efficient than 'heappop()' and 
+'heappush()', and can be more appropriate when using a fixed-size heap. <br />
+heapq.merge(*iterables, key=None, reverse=False) => 
+
 
 
 
