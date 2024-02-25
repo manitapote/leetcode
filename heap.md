@@ -38,8 +38,11 @@ Heapify:
 - Time complexity O(n)<br /><br />
 
 Priority Queues: <br />
--Each element insert or delete O(log(n))<br />
+-Each element insert or delete O(log(n))<br /><br />
 
+Python heapq: Each parent node is small or equal to any of its children. It is a min-heap.<br />
+Functions: <br />
+heapq.heappush(heap, item) => 
 
 
 
