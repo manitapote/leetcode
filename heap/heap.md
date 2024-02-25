@@ -51,7 +51,18 @@ heapq.heapify() => transforms x list into heap. <br />
 heapq.heapreplace(heap, item) => Pop and returns the smallest item from the heap and also pushes the new item.
 The heap size does not change. If empty, 'IndexError' is raised. The function is more efficient than 'heappop()' and 
 'heappush()', and can be more appropriate when using a fixed-size heap. <br />
-heapq.merge(*iterables, key=None, reverse=False) => 
+heapq.merge(*iterables, key=None, reverse=False) =>  The iterables is multiple list, not
+list of list. All the lists need to be sorted either in ascending or descending,
+else error is thrown. If the list is a dictionary element,
+key name can be specified like this: key=lambda x: x['age'].
+Reverse to order in descending order<br />
+heapq.nlargest(n, iterable, key=None) =>  Returns the largest 'n' elements from iterable. If the key is
+provided specified that specific key is used to compare the elements. The iterable do not have to be
+sorted in first place. It is memory efficient and convenient to handle multiple sorted data structures.<br />
+heapq.nsmallest(n, iterable, key=None) =>  Returns the smallest 'n' elements from iterable. If the key is
+provided specified that specific key is used to compare the elements. The iterable do not have to be
+sorted in first place.<br /><br />
+
 
 
 
