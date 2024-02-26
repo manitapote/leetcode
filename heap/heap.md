@@ -68,7 +68,17 @@ ShiftDown: Time complexity O(n) => 0*n/2 + 1*n/8 .... h*1 = h*n/(2^(n+1)) ~ n <b
 ShiftUp is needed to perform inserts into an existing heap. <br />
 ShiftDown is more efficient for building heap (this is not same as sorting)
 and it can be O(n). <br />
-sorting heap is O(nlog(n))<br />
+sorting heap is O(nlog(n))<br /><br />
+
+What are heaps better for? <br />
+Best for priority based selection <br />
+Heaps are better for the cases where we need to repeatedly remove the smallest (or largest)
+element from a collection of items as in priority queue implementation. For the tasks like scheduling
+or simulation where this operation is common, heaps can be more efficient than sorted arrays or lists. <br /><br/>
+
+Limitations: <br />
+- Poor cache performance compared to algorithms like quicksort or even merge sort.
+- Not stable sort, equal elements might not retain their original order after sorting.
 
 
 
