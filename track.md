@@ -1,10 +1,10 @@
 ### Data Structures
 - Arrays
-- Linked Lists
+- ***Linked Lists***
 - Stacks
 - Queues
-- Hash Tables
-- Trees
+- ***Hash Tables***
+- ***Trees
 - ***Heaps (Priority Queue)***
 - Graphs
 - Tries
