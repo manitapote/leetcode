@@ -26,7 +26,7 @@
 #Short solution
 # from collections import Counter
 
-#Time complexity: O(n)
+#Time complexity: cO(n)
 # class Solution:
 #     def maxNumberOfBalloons(self, text: str) -> int:
 #         cnt = Counter(text)
