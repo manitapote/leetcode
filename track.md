@@ -1,6 +1,6 @@
 ### Data Structures
 - Arrays
-- Linked Lists
+- Linked Lists **Next**
 - Stacks
 - Queues
 - Hash Tables
