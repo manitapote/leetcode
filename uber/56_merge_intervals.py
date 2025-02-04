@@ -8,38 +8,22 @@
 
 class Solution:
     def merge(self, intervals):
-        right = 1
-        results = []
-        new_interval = intervals[0]
-        while right < len(intervals):
-            #keep on adding until condition apply
-            if new_interval[1] >= intervals[right][0]:
-                #take minimum of the first element as first element of new array
-                #take maximum of the second element as second element of new array
-                new_interval = [min(new_interval[0], intervals[right][0]),
-                                max(intervals[right][1], new_interval[1])
-                                ]
-                right += 1
-                continue
+        if len(intervals) == 0:
+            return []
 
-            #store result
+        intervals.sort(key=lambda x: x[0])
+
+        output = [intervals[0]]
+        for start, end in intervals[1:]:
+            last = output[-1][1]
+            if start <= last:
+                output[-1][1] = max(end, last)
             else:
-                results.append([new_interval[0],new_interval[1]])
+                output.append([start, end])
 
-                #start with new index
-                new_interval = [intervals[right][0],
-                                intervals[right][1]
-                                ]
+        return output
 
-                right += 1
-
-        #add the last result
-        results.append([new_interval[0],new_interval[1]])
-
-        return results
-
-
-
+#Possible edge case
 intervals = [[1, 3], [2, 6], [8, 10], [15, 18]]
 
 a = Solution()
@@ -47,7 +31,26 @@ a = Solution()
 print(a.merge(intervals))
 
 
-intervals = [[1,4], [0,4]]
+intervals = [[0,0], [0,6]]
 a = Solution()
 print(a.merge(intervals))
+intervals = [[1,6],[0,2]]
+a = Solution()
+print(a.merge(intervals))
+intervals = [[1,1],[0,6]]
+a = Solution()
+print(a.merge(intervals))
+intervals = [[0,6],[1,1]]
+a = Solution()
+print(a.merge(intervals))
+intervals = [[1,4],[0,0]]
+a = Solution()
+print(a.merge(intervals))
+intervals = [[2,3],[4,5],[6,7],[8,9],[1,10]]
+a = Solution()
+print(a.merge(intervals))
+
+
+
+
 
