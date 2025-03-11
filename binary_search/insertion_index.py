@@ -13,7 +13,7 @@ def search(nums, target, left, right):
         mid = left + (right - left) // 2
 
         ### Lower bound of the problem
-        if nums[mid] > target:
+        if nums[mid] >= target:
             right = mid
         else:
             left = mid + 1
