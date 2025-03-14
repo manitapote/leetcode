@@ -32,6 +32,8 @@ def k_most_frequent_strings(strs: List[str],
     return [heapq.heappop(min_heap).strs for i in range(k)][::-1]
 
 #Time complexity= O(klog(k) + k + nlog(k))
+#Space: O(n) + O(k)
+
 strs = ['go', 'coding','byte',
         'byte', 'go', 'interview',
         'interview', 'go'
