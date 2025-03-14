@@ -1,5 +1,10 @@
 ## Heaps
 
+#### Python does not support max heap
+- One way to implement it for numbers is to use the negative of numbers and push it in heap.
+- If elements are complex like tuple of string and number, make number a key with negative.
+
+
 Binary tree: <br />
 if a node is at index i: <br />
 its left child is at -- 2*i <br />
