@@ -56,18 +56,21 @@ import heapq
 from typing import List
 def combine_sorted_linked_lists(lists):
     x = []
-    k = 3
     result = []
 
+    #O(k)
     for node in lists:
         x.append(node.head)
 
+    #O(k)
+    heapq.heapify(x)
+
+    #O(nlog(k) + nlog(k))
+    #O(k)
     head = Node(None)
     curr = head
     while x:
-        heapq.heapify(x)
         min_x = heapq.heappop(x)
-
         result.append(min_x.data)
 
         curr.next = min_x
@@ -78,6 +81,8 @@ def combine_sorted_linked_lists(lists):
 
     return result
 
+#O(nlog(k))
+#O(k)
 lists = [one_link, two_link, three_link]
 result = combine_sorted_linked_lists(lists)
 print(result)
