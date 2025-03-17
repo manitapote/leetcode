@@ -30,6 +30,7 @@ def indentify_all_interval_overlap(int_1, int_2):
     p_1 = 0
     p_2 = 0
     result = []
+    #O(n+m)
     while p_1 < len(int_1) and p_2 < len(int_2):
         #which start first
         if int_1[p_1].start < int_2[p_2].start:
