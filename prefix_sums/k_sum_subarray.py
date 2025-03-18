@@ -19,6 +19,8 @@ def subarray_sum_to_k(nums, k):
     prefix_sum = {}
     count = 0
     sum_prefix = 0
+    #T=O(n)
+    #S=O(m~n)
     for x in nums:
         sum_prefix += x
         remain = sum_prefix - k
