@@ -25,3 +25,5 @@ def dfs(node, graph, color, colors):
 
 graph = [[1, 4], [0, 2], [1], [4], [0, 3]]
 print(bipartite_graph_validation(graph))
+
+#Cases to consider: make sure all the disconnected components are visited
