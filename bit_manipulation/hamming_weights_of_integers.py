@@ -24,6 +24,8 @@ def hamming_weight_dynamic(n: int) -> List:
         print(x >> 1)
         dp[x] = dp[x >> 1] + (x & 1)
 
+    #Logic: if the last bit is 1, the x and x >> 1 has 1 bit difference
+    #If the last bit is 0, the x and x >> 1 has 0 difference
     return dp
 # n=4
 # print(convert_to_binary(n))
