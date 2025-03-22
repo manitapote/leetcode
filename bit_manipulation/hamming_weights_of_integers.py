@@ -17,5 +17,24 @@ def convert_to_binary(n):
 
     return int(binary)
 
-n=4
-print(convert_to_binary(n))
+from typing import List
+def hamming_weight_dynamic(n: int) -> List:
+    dp = [0]*(n+1)
+    for x in range(1, n+1):
+        print(x >> 1)
+        dp[x] = dp[x >> 1] + (x & 1)
+
+    return dp
+# n=4
+# print(convert_to_binary(n))
+n=7
+print(hamming_weight_dynamic(n))
+
+#Time complexity: O(log_2_(n)) as there are log_2_n bits for a number
+#If we repeat this n times : O(nlog_2_(n))
+#If there are 32 bits for each number, the time is constant for each number and O(n)
+#Sapce complexity: O(1)
+
+
+# FastAPI, ONNX, TensorRT, and serverless
+# deployment.
