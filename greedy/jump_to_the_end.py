@@ -6,7 +6,8 @@ def canJump(nums):
 
     return destination == 0
 
-
+#T=O(n)
+#S=O(1)
 #this can be solved like a two pointer problem
 nums = [3, 2, 0, 2, 5]
 print(canJump(nums))
