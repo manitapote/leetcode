@@ -20,3 +20,6 @@ ratings = [4, 3, 2, 4, 5, 1]
 print(number_of_candies(ratings))
 ratings = [1, 3, 3]
 print(number_of_candies(ratings))
+
+#The main learning is local minima for increasing order lie on left side
+# and for decreasing order lie in right side
