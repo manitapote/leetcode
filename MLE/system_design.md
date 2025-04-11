@@ -37,8 +37,12 @@ The drawback of deletion is that it decrease the data quantity. This case is not
 - The drawback of imputation is that it introduces noise to the data.
 
 #### Feature Scaling
-- Normalization (min-max scaling):
+- Normalization (min-max scaling): This process scales the values so that values are within the range (0,1).
 $$z = \frac{x - x_{min}}{x_{max} - x_{min}}$$
 
-- Standardization (Z-score normalization): 
+- Standardization (Z-score normalization): This process changes the distribution of a feature to have a mean 0 and
+standard deviation of 1.
 $$z = \frac{x - \mu}{\delta}$$
+
+- Log scaling: This mitigates the skewness of a feature.
+$$z = log(x)$$
