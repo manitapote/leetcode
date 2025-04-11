@@ -38,9 +38,7 @@ The drawback of deletion is that it decrease the data quantity. This case is not
 
 #### Feature Scaling
 - Normalization (min-max scaling):
-$$
-z = \frac{x - x_{min}}{x_{max} - x_{min}}
-$$
+$ z = \frac{x - x_{min}}{x_{max} - x_{min}} $
 
 - Standardization (Z-score normalization): 
 $$
