@@ -68,8 +68,9 @@ under-researched population.
 
 1) **Convenience sampling**: Easy and inexpensive way to gather initial data. The individuals can be anyone available to
 the researcher. The sample might not be representative of the population so the results might not be generalizable.
+This sampling process is at risk for both **sampling bias** and **selection bias**.
+<br />
 2) **Snowball sampling**:
-3) **Stratified sampling**:
 4) **Reservoir sampling**:
 5) **Importance sampling**:
 
