@@ -80,3 +80,26 @@ user data necessary? Is it possible to store user's data on our servers, or is i
 their device?
 - **Biases**: Are there any biases in the data? If yes, what kinds of biases are present and how do we correct them?
 
+
+#### Baseline for some classification tasks
+- Majority class baseline
+- Random guessing baseline
+- Logistic regression
+
+#### Model selection
+- Establish a simple baseline
+- Experiment with simple models
+- Switch to more complex models
+- Use an ensemble of models if we want more accurate predictions (bagging, boosting and stacking)
+
+
+#### Different aspect to consider while choosing ML model
+- The amount of data the model needs to train on
+- Training speed
+- Hyperparameters to choose and hyperparameter tuning techniques
+- Possibility of continual learning
+- Compute requirements. A more complex model might deliver higher accuracy, but might require more computing power,
+such as a GPU instead of CPU.
+- Model's interpretability. A more complex model can give better performance, but its results may be less interpretable.
+
+
