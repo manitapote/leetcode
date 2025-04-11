@@ -55,7 +55,7 @@ collect data, so you randomly sample 3 offices and these offices are the cluster
 
 <br />
 **Note**: This sounds more like a tree structure. We want to decide which level we want to consider for aggregation.
-
+<br />
 B) Non-probability sampling methods:
 1) **Convenience sampling**:
 2) **Snowball sampling**:
