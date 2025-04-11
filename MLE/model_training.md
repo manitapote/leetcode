@@ -20,7 +20,7 @@ requires domain knowledge, and is threat to data privacy.
 2) **Natural labeling**: Ground truth labels are inferred automatically without human annotation.
 
 #### Sampling Strategy
-[Source](https://www.scribbr.com/methodology/sampling-methods/)
+[Source](https://www.scribbr.com/methodology/sampling-methods/) <br />
 A) **Probability sampling methods**: In this method every member of the population has a chance of being selected. It
 is mainly used in quantitative research. If we want to produce results that are representative of the whole population,
 probability sampling techniques are the most valid choice.
@@ -56,8 +56,18 @@ collect data, so you randomly sample 3 offices and these offices are the cluster
 <br />
 **Note**: This sounds more like a tree structure. We want to decide which level we want to consider for aggregation.
 <br />
-B) Non-probability sampling methods:
-1) **Convenience sampling**:
+
+B) **Non-probability sampling methods**: Individuals are selected based on non-random criteria, and not every individual
+has a chance of being included.
+This type of sampling is easier and cheaper to access but have higher risk of sampling bias. The inferences we make
+about the population are weaker than with probability samples, and conclusions may be more limited.
+<br />
+Non-probability sampling techniques are often used in exploratory and quantitative research. In these types of research,
+the aim is not to test a hypothesis about a broad population but to develop an initial understanding of small or
+under-researched population.
+
+1) **Convenience sampling**: Easy and inexpensive way to gather initial data. The individuals can be anyone available to
+the researcher. The sample might not be representative of the population so the results might not be generalizable.
 2) **Snowball sampling**:
 3) **Stratified sampling**:
 4) **Reservoir sampling**:
