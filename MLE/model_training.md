@@ -63,7 +63,7 @@ Example: The company has offices in 10 cities across the country. If it is not p
 collect data, so you randomly sample 3 offices and these offices are the clusters.
 
 **Note**: This sounds more like a tree structure. We want to decide which level we want to consider for aggregation.
-<br /><br />
+<br />
 
 B) **Non-probability sampling methods**: Individuals are selected based on non-random criteria, and not every individual
 has a chance of being included.
@@ -78,11 +78,22 @@ under-researched population.
    the researcher. The sample might not be representative of the population so the results might not be generalizable.
    This sampling process is at risk for both **sampling bias** and **selection bias**.
    <br />
-2) **Snowball sampling**:
-4) **Reservoir sampling**:
+2) **Snowball sampling**: If the population is hard to access, snowball sampling can be used to recruit participants via
+other participants. The number of people you have access snowballs to get more people in contact. 
+This sampling has **sampling bias**.
+For example: If the research is about homelessness in the city, there is no list of all homeless people in the city.
+You meet one person who agrees to participate in the research, and that person puts in contact with other homeless
+people that she knows in the area.
+
+4) **Reservoir sampling**: This sampling is used in online training. It is a randomized algorithm used to uniformly
+sample $k$ items from a stream of unknown or very large size $n$, without knowing $n$ in advance or storing the entire
+stream in memory. It is mainly used when dealing with big data or data streams. Further, if all the data does not fit
+into the memory.
+<br />
+
 5) **Importance sampling**:
 
-6)**Voluntary response sampling**: People volunteer themselves (eg. public survey). Voluntary response samples are
+6) **Voluntary response sampling**: People volunteer themselves (eg. public survey). Voluntary response samples are
 always at least somewhat **biased**, as some people will inherently be more likely to volunteer than others, leading to
 **self-selection bias**.
 
