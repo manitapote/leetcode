@@ -62,9 +62,8 @@ This method is good for dealing with large and dispersed populations. <br />
 Example: The company has offices in 10 cities across the country. If it is not possible to travel to each office to
 collect data, so you randomly sample 3 offices and these offices are the clusters.
 
-<br />
 **Note**: This sounds more like a tree structure. We want to decide which level we want to consider for aggregation.
-<br />
+<br /><br />
 
 B) **Non-probability sampling methods**: Individuals are selected based on non-random criteria, and not every individual
 has a chance of being included.
@@ -83,9 +82,8 @@ under-researched population.
 4) **Reservoir sampling**:
 5) **Importance sampling**:
 
-<br />
-6) **Voluntary response sampling**: People volunteer themselves (eg. public survey). Voluntary response samples are
-always at least somewhat **biased**, as some people will inherently be more likely to volunteer than others, leading to 
+6)**Voluntary response sampling**: People volunteer themselves (eg. public survey). Voluntary response samples are
+always at least somewhat **biased**, as some people will inherently be more likely to volunteer than others, leading to
 **self-selection bias**.
 
 7) **Purposive sampling**: This is called judgement sampling. It involves the researcher using their expertise to select
