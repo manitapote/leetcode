@@ -41,7 +41,4 @@ The drawback of deletion is that it decrease the data quantity. This case is not
 $$z = \frac{x - x_{min}}{x_{max} - x_{min}}$$
 
 - Standardization (Z-score normalization): 
-$$
-z = \frac{x - \mu}_{\delta}
-$$
-- 
+$$z = \frac{x - \mu}_{\delta}$$
