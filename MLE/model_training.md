@@ -32,3 +32,7 @@ B) Non-probability sampling methods:
 3) **Stratified sampling**:
 4) **Reservoir sampling**:
 5) **Importance sampling**:
+
+#### Splitting the data
+
+#### Address any class imbalances
