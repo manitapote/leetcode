@@ -20,6 +20,7 @@ requires domain knowledge, and is threat to data privacy.
 2) **Natural labeling**: Ground truth labels are inferred automatically without human annotation.
 
 #### Sampling Strategy
+[Source](https://www.scribbr.com/methodology/sampling-methods/)
 A) **Probability sampling methods**: In this method every member of the population has a chance of being selected. It
 is mainly used in quantitative research. If we want to produce results that are representative of the whole population,
 probability sampling techniques are the most valid choice.
@@ -35,9 +36,25 @@ randomly select a starting point: number 6. From number 6 onwards, every 10th pe
 If this technique is used, it is important to make sure that there is no hidden pattern in the list that might skew the
 sample.
 
-3) **Stratified sampling**: 
+3) **Stratified sampling**: Stratified sampling divides the population into subpopulation that differ in important ways.
+It makes sure that every subgroup is properly represented in the sample. To use this sampling method, we divide the
+population into subgroups (called strata) based on the relevant characteristics (e.g. gender identity, age, range,
+income bracket, job role). Based on the proportions, we calculate how many people should be sampled from each subgroup.
+<br />
+For example: If there are 800 female and 200 male employees, a sample of 100 people would include 80 women and 20 men. 
 
-4) **Cluster sampling**
+
+4) **Cluster sampling**: It divides the population into subgroups, but each subgroup should have similar characteristics
+to the whole sample. Instead of sampling individuals from each subgroup, we randomly select entire subgroups. If
+practical, all the individual from each sampled cluster are included. If clusters are large, we can sample individuals
+from within each cluster using one of the techniques above. This is also called multi-stage sampling.
+
+This method is good for dealing with large and dispersed populations. <br />
+Example: The company has offices in 10 cities across the country. If it is not possible to travel to each office to
+collect data, so you randomly sample 3 offices and these offices are the clusters.
+
+<br />
+**Note**: This sounds more like a tree structure. We want to decide which level we want to consider for aggregation.
 
 B) Non-probability sampling methods:
 1) **Convenience sampling**:
