@@ -37,3 +37,13 @@ $$\lambda =$$ eigenvalue (amount of  variance explained in that direction)
 
 #### Where does PCA fails?
 - When data is non-linear, noisy with high variance, or strongly non-Gaussian.
+
+#### Where does visualization with PCA could lead to misreadings?
+- Outlier could disort PCA so the cluster spread out could be because of noise.
+- Two clusters are far apart but they could be close in other dimensions.
+- High-dimensional spaces have alot more 'room' than 2D or 3D. PCA forces all points into a small flat space. Dense
+areas in 2D may not be dense in high dimensions.
+- Principal components are just directions maximizing variance. They often don't have easy human interpretation.
+
+#### Ml Research Questions related PCA
+-
