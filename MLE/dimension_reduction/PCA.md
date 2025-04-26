@@ -55,8 +55,20 @@ areas in 2D may not be dense in high dimensions.
   - Without centering, eigenvectors and variance directions become wrong.
 
 - What assumptions does PCA makes about the data?
+  - Linearity, high variance = important structure, mean-centered data, continuous numerical features
+  
 - What are principal components orthogonal?
+  - PCA solves for eigenvectors of the covariance matrix.
+  - In linear algebra, eigenvectors of a symmetric matrix (like variance) are always orthogonal.
+  - Orthogonality ensures that principal components are uncorrelated and independent directions of variation.
+  - It prevents redundancy between components -- each captures unique variance.
+
 - What does high variance mean in PCA?
+  - High variance along a direction mean data points are more spread out in that direction.
+  - PCA assumes that more spread = more information (not noise).
+  - So principal components with high variance capture the essential structure of the data.
+  - Low variance directions are likely noise or less important features, and can be discarded during dimensionality
+  reduction.
 
 - How do you choose the number of principal components?
   - Plot explained variance ratio using scree plot (elbow curve).
@@ -90,12 +102,79 @@ areas in 2D may not be dense in high dimensions.
   - However, if important cluster structure lies in small-variance directions, PCA may hurt clustering.
 
 - How can PCA help in reducing overfitting?
+  - PCA reduces the number of features (dimensions), keeping only the directions that explain most variance.
+  - By discarding low-variance (likely noise) dimensions, PCA removes irrelevant patterns that could cause model to
+  overfit.
+  - Lower-dimensional models are less likely to memorize noise, improving generalization.
+  - Particularly useful when the number of features is large compared to the number of samples (curse of dimensionality).
+
 - Why might PCA fail when the features are not continuous or numerical?
-- How would you visualize the results of PCA when working with very large feature spaces?
+  - PCA assumes that features are numeric and continuous because it computes variance and covariance.
+  - Categorical variables (eg. red, green, blue) don't have a natural ordering or distance -- covariance doesn't make
+  sense.
+  - Directly applying PCA to categorical features can produce misleading results.
+  - Proper handling: encode categories first (eg. one-hot encoding) or use methods like MCA (Multiple Correspondence
+  Analysis) designed for categorical data.
+  
+- How would you visualize the results of PCA when working with very large feature spaces? 
+  - First, reduce dimensions to 2D or 3D by selecting top principal components (PC1, PC2, optionally PC3).
+  - Use scatter plots (2D or 3D) colored by labels if available (eg, classes, clusters).
+  - Plot explained variance ratio ('scree plot') to show how much information each PC captures.
+  - Optionally, biplots: show PCs and how original features load onto them.
+  - For very large datasets, sample points for clarity or use density plots (eg. hexbin, contour).
+  
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
 - How does PCA interact with regularization (eg. L1/L2 penalties)?
+  - PCA acts as unsupervised feature compression -- it reduces the number of dimensions before modeling. 
+  - L1/L2 penalties (used in supervised models like ridge/lasso) apply after model training, penalizing coefficients to
+  control complexity.
+  - PCA reduces the input complexity first, regularization penalizes model weights afterward.
+  - Important: PCA removes feature interpretability, so applying L1 (lasso feature selection) after PCA has no clear
+  original feature meaning.
+  - Both PCA and regularization reduce overfitting, but in different ways:
+    - PCA reduces input dimensions.
+    - L1/L2 control model flexibility.
 
 3) Deep/Research-Level Questions
 - How would you modify PCA to work for categorical data?
 - What are alternative to PCA when data lies on a non-linear manifold?
 - How does Kernel PCA differ from standard PCA?
+
 - What are the differences between PCA and Autoencoders for dimensionality reduction?
+  - Model type: PCA is a linear algebra-based method (eigen decomposition of covariance matrix). Autoencoder is neural
+  network based model that models non-linear relationships.
+  - Linearity vs. Non-linearity: PCA finds linear principal components. Autoencoder can capture nonlinear patterns
+  through nonlinear activation functions (ReLU, Tanh).
+  - Interpretability: Components are linear combinations of original features -- somewhat interpretable. Autoencoder
+  latent features are less interpretable (they are learned abstract representations).
+  - Training approach: Autoencoder require training and backpropagation.
+  - Data Requirements: PCA works well on small-to-medium datasets. Autoencoder needs more data and careful tuning.
+  - Reconstruction Quality: PCA is good if underlying structure is linear. Autoencoder is better reconstruction quality
+  on nonlinear data because of its flexibility.
+
+4) Advanced PCA Questions
+- What are limitations of PCA in supervised learning?
+  - PCA is unsupervised -- it does not use label information when finding components.
+  - So, PCA does not necessarily preserve class separability -- it maximizes variance, not label information.
+  - Applying PCA before supervised model (classification) can sometimes hurt performance, because useful features for
+  classification might be low-variance and discarded.
+  - Better options: supervised dimensionality reduction methods like linear discriminant analysis (LDA) if preserving
+  class separability is important.
+
+- How would you modify PCA to preserve class separability?
+   - Use Supervised PCA: modify objective to also consider correlation with labels.
+   - Use Linear Discriminant Analysis (LDA):
+     - Maximizes between-class variance
+     - Minimizes within-class variance
+   - Alternatively, use PCA + feature selection: Apply PCA for compression, then supervised feature selection afterward
+   keep discriminative components.
+   - Newer methods like Deep CCA, Supervised Manifold Learning also exist for complex tasks.
+
+- When should you prefer kernel PCA over standard PCA?
+  - Standard PCA finds linear principal components.
+  - If data lies on a non-linear manifold (eg. curved, spiraled structure like swiss roll), linear PCA fails.
+  - Kernel PCA maps data into a higher-dimensional feature space using a kernel (eg. RBF), then applies PCA there.
+  - Kernel PCA captures nonlinear patterns -- suitable for complex datasets where linear spread isn't enough.
+
+- What are alternatives to PCA for non-linear dimensionality reduction?
+  - t-SNE, UMAP, Isomap, Autoencoders
