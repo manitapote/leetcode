@@ -91,7 +91,10 @@ stream in memory. It is mainly used when dealing with big data or data streams. 
 into the memory.
 <br />
 
-5) **Importance sampling**:
+5) **Importance sampling**: In this method we focus on the most useful data points instead of treaing every sample 
+equally. We do this because some data points are more helpful for training the model, have bigger errors(loss) and teach
+the model more. So instead of picking training examples randomly, we sample more of the important ones and adjust for 
+the bias using weights.
 
 6) **Voluntary response sampling**: People volunteer themselves (eg. public survey). Voluntary response samples are
 always at least somewhat **biased**, as some people will inherently be more likely to volunteer than others, leading to
