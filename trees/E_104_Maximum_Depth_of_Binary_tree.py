@@ -38,4 +38,7 @@ b_1 = TreeNode(1)
 b_2 = TreeNode(2)
 b_1.right = b_2
 
-print(height(b_1))
+c_1 = TreeNode(1)
+
+# print(height(b_1))
+print(height(c_1))
