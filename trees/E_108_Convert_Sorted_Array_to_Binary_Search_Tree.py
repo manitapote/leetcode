@@ -31,6 +31,17 @@ def sortedArrayToBST(nums: List[int]) -> Optional[TreeNode]:
 nums = [-10, -3, 0, 5, 9]
 root = sortedArrayToBST(nums)
 
+#Time complexity:
+#create one node = O(1)
+#dfs on two halves = n/2
+#T(n) = T(n/2) + T(n/2) + O(1) = O(n)
+
+
+#Space complexity
+#Recursion stack depth is based on the height of the tree.
+#Balanced BST, height is: O(log(n)) (recursion stack)
+
+
 result = []
 def read(node: TreeNode, result):
     if node == None:
